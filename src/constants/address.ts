@@ -1,4 +1,6 @@
-export const address = {
+import { ObjectLiteralStr } from '../interfaces/ObjectLiteral';
+
+export const address: ObjectLiteralStr = {
     "mainnet": {
         "AccountTokenLib": "0x0d6Cce05975967002E20354778C398A89eBEA9b4",
         "Accounts": "0x2882A238599C4C2DFfAbA9C0E056d0BBe6D2Dfa8",
