@@ -1,5 +1,5 @@
 import { Contract } from 'web3-eth-contract';
-import { ContractInstance } from './ContractInstance';
+import { ContractInstance } from './index';
 import { idNameMap } from '../constants/network';
 import { address } from '../constants/address';
 import Web3 from 'web3';
@@ -20,7 +20,7 @@ export class SavAccInstance extends ContractInstance {
      * 2. SavingAccount contract address not found: The current network doesn't 
      * have a deployed saving account instance.
      */
-    async initialize(): Promise<void> {
+    public async initialize(): Promise<void> {
         this.networkID = await this.web3.eth.net.getId();
         const networkName: string = idNameMap[this.networkID];
 
@@ -43,7 +43,7 @@ export class SavAccInstance extends ContractInstance {
     /**
      * The getter for contract attribute.
      */
-    async getContract(): Promise<Contract> {
+    public async getContract(): Promise<Contract> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -60,7 +60,7 @@ export class SavAccInstance extends ContractInstance {
      * @param user - The user address.
      * @param gasPrice - The gas price of the transaction.
      */
-    async deposit(tokenName: string, amount: any, user: string, gasPrice: string): Promise<void> {
+    public async deposit(tokenName: string, amount: any, user: string, gasPrice: string): Promise<void> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -78,7 +78,7 @@ export class SavAccInstance extends ContractInstance {
      * @param gasPrice - The gas price of the transaction.
      * @param user - The user address.
      */
-    async repay(tokenName: string, amount: string, gasPrice: string, user: string): Promise<void> {
+    public async repay(tokenName: string, amount: string, gasPrice: string, user: string): Promise<void> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -97,7 +97,7 @@ export class SavAccInstance extends ContractInstance {
      * @param gasPrice - The gas price of the transaction.
      * @param user - The user address.
      */
-    async withdraw(tokenName: string, amount: string, gasPrice: string, user: string): Promise<void> {
+    public async withdraw(tokenName: string, amount: string, gasPrice: string, user: string): Promise<void> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -114,7 +114,7 @@ export class SavAccInstance extends ContractInstance {
      * @param gasPrice - The gas price of the transaction.
      * @param user - The user address.
      */
-    async withdrawAll(tokenName: string, gasPrice: string, user: string): Promise<void> {
+    public async withdrawAll(tokenName: string, gasPrice: string, user: string): Promise<void> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -132,7 +132,7 @@ export class SavAccInstance extends ContractInstance {
      * @param user - The user address.
      * @param gasPrice - The gas price of the transaction.
      */
-    async borrow(tokenName: string, amount: any, user: string, gasPrice: string): Promise<void> {
+    public async borrow(tokenName: string, amount: any, user: string, gasPrice: string): Promise<void> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -151,7 +151,7 @@ export class SavAccInstance extends ContractInstance {
      * @param gasPrice - The gas price of the transaction.
      * @param user - The user address.
      */
-    async transfer(tokenName: string, amount: string, to: string, gasPrice: string, user: string): Promise<void> {
+    public async transfer(tokenName: string, amount: string, to: string, gasPrice: string, user: string): Promise<void> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {

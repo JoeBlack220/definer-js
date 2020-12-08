@@ -1,5 +1,5 @@
 import { Contract } from 'web3-eth-contract';
-import { ContractInstance } from './ContractInstance';
+import { ContractInstance } from './index';
 import { idNameMap } from '../constants/network';
 import { address } from '../constants/address';
 import Web3 from 'web3';
@@ -20,7 +20,7 @@ export class AccountsInstance extends ContractInstance {
      * 2. SavingAccount contract address not found: The current network doesn't 
      * have a deployed saving account instance.
      */
-    async initialize(): Promise<void> {
+    public async initialize(): Promise<void> {
         this.networkID = await this.web3.eth.net.getId();
         const networkName: string = idNameMap[this.networkID];
 
@@ -43,7 +43,7 @@ export class AccountsInstance extends ContractInstance {
     /**
      * The getter for contract attribute.
      */
-    async getContract(): Promise<Contract> {
+    public async getContract(): Promise<Contract> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -57,7 +57,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async isUserHasAnyDeposits(user: string, target: string): Promise<any> {
+    public async isUserHasAnyDeposits(user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -72,7 +72,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getDepositPrincipal(tokenName: string, user: string, target: string): Promise<any> {
+    public async getDepositPrincipal(tokenName: string, user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -88,7 +88,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getBorrowPrincipal(tokenName: string, user: string, target: string): Promise<any> {
+    public async getBorrowPrincipal(tokenName: string, user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -104,7 +104,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getLastDepositBlock(tokenName: string, user: string, target: string): Promise<any> {
+    public async getLastDepositBlock(tokenName: string, user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -120,7 +120,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getLastBorrowBlock(tokenName: string, user: string, target: string): Promise<any> {
+    public async getLastBorrowBlock(tokenName: string, user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -136,7 +136,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getDepositInterest(tokenName: string, user: string, target: string): Promise<any> {
+    public async getDepositInterest(tokenName: string, user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -152,7 +152,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getBorrowInterest(tokenName: string, user: string, target: string): Promise<any> {
+    public async getBorrowInterest(tokenName: string, user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -168,7 +168,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getDepositBalanceCurrent(tokenName: string, user: string, target: string): Promise<any> {
+    public async getDepositBalanceCurrent(tokenName: string, user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -184,7 +184,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getBorrowBalanceCurrent(tokenName: string, user: string, target: string): Promise<any> {
+    public async getBorrowBalanceCurrent(tokenName: string, user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -199,7 +199,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getBorrowPower(user: string, target: string): Promise<any> {
+    public async getBorrowPower(user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -214,7 +214,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getDepositETH(user: string, target: string): Promise<any> {
+    public async getDepositETH(user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -228,7 +228,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async getBorrowETH(user: string, target: string): Promise<any> {
+    public async getBorrowETH(user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
@@ -242,7 +242,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    async isAccountLiquidatable(user: string, target: string): Promise<any> {
+    public async isAccountLiquidatable(user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
