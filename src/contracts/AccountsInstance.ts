@@ -57,7 +57,7 @@ export class AccountsInstance extends ContractInstance {
      * @param user - The user address.
      * @param target - The account you 
      */
-    public async isUserHasAnyDeposits(user: string, target: string): Promise<any> {
+    public async userHasAnyDeposits(user: string, target: string): Promise<any> {
         if (!this.contract) {
             throw new Error("Contract Instance is not initialized.");
         } else {
