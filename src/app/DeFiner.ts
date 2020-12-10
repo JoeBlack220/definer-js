@@ -383,6 +383,23 @@ export class DeFiner {
     }
 
     /**
+     * Helper function to get the Bank contract.
+     */
+    private async getBankContract(): Promise<BankInstance> {
+        if (!this.contractInstanceStore) {
+            await this.initialize();
+        }
+
+        if (!this.contractInstanceStore) {
+            throw new Error("ContractInstanceStore can't be intialized.");
+        }
+
+        const bankInstance = await this.contractInstanceStore.getBankInstance();
+
+        return bankInstance;
+    }
+
+    /**
      * Get the token name given the enum
      * @param token : The token in enum.
      */
@@ -395,6 +412,8 @@ export class DeFiner {
 
         return tokenName;
     }
+
+
 
 
 }
