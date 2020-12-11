@@ -1,10 +1,9 @@
 import { Contract } from 'web3-eth-contract';
-import { ContractInstance } from './index';
+import { ContractInstance } from './ContractInstance';
 import { idNameMap } from '../constants/network';
 import { address } from '../constants/address';
 import Web3 from 'web3';
 
-const { BN } = require("@openzeppelin/test-helpers");
 const abi = require('../constants/json/abi.json')
 
 export class BankInstance extends ContractInstance {

@@ -4,7 +4,7 @@
   "description": "SDK for DeFiner's protocol in Javascript",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'tests/**/*.ts' --exit"
   },
   "repository": {
     "type": "git",
@@ -18,13 +18,20 @@
   "homepage": "https://github.com/JoeBlack220/definer-js#readme",
   "devDependencies": {
     "mocha": "^8.2.1",
+    "ts-node": "^9.1.1",
     "typescript": "^4.1.2"
   },
   "dependencies": {
     "@openzeppelin/test-helpers": "^0.5.9",
     "@types/axios": "^0.14.0",
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.2.0",
+    "@types/truffle-privatekey-provider": "^1.1.0",
     "@types/web3": "^1.2.2",
     "axios": "^0.21.0",
+    "chai": "^4.2.0",
+    "truffle-hdwallet-provider": "^1.0.17",
+    "truffle-privatekey-provider": "^1.5.0",
     "web3": "^1.3.0"
   }
 }

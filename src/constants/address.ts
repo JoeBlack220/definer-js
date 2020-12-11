@@ -47,7 +47,8 @@ export const address: ObjectLiteralStr = {
         "FINAggregator": "0xd7Cd4e27d9333013b0Fe9cE82855f71Ae126C51E",
         "LPToken": "0x486792bcdb13F8aaCf85288D98850FA2804F95c7",
         "LPTokenAggregator": "0x444F88FDd587C1Bd6B50bB8924f964DEC590e403",
-        "cETH": "0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5"
+        "cETH": "0x4ddc2d193948926d02f9b1fe9e1daa0718270ed5",
+        "ETH": "0x000000000000000000000000000000000000000E"
     },
     "ropsten": {
         "DAI": "0xc2118d4d90b274016cb7a54c03ef52e6c537d957",
@@ -76,6 +77,8 @@ export const address: ObjectLiteralStr = {
         "WBTCAggregator": "0x5b8B87A0abA4be247e660B0e0143bB30Cdf566AF",
         "cWBTC": "0x58145bc5407d63daf226e4870beeb744c588f149",
         "cETH": "0xbe839b6d93e3ea47effcca1f27841c917a8794f3",
+        "ETH": "0x000000000000000000000000000000000000000E"
+
     },
     "kovan": {
         "DAI": "0x4f96fe3b7a6cf9725f59d353f723c1bdb64ca6aa",
@@ -104,6 +107,7 @@ export const address: ObjectLiteralStr = {
         "aggregatorAddress": "0x33E5085E92f5b53E9A193E28ad2f76bF210550BB",
         "cWBTC": "0xa1faa15655b0e7b6b6470ed3d096390e6ad93abb",
         "cETH": "0x41b5844f4680a8c38fbb695b7f9cfd1f64474a72",
+        "ETH": "0x000000000000000000000000000000000000000E"
     },
     "rinkeby": {
         "DAI": "0x5592ec0cfb4dbc12d3ab100b257153436a1f0fea",
@@ -132,5 +136,6 @@ export const address: ObjectLiteralStr = {
         "WBTCAggregator": "0x5498BB86BC934c8D34FDA08E81D444153d0D06aD",
         "cWBTC": "0x0014f450b8ae7708593f4a46f8fa6e5d50620f96",
         "cETH": "0xd6801a1dffcd0a410336ef88def4320d6df1883e",
+        "ETH": "0x000000000000000000000000000000000000000E"
     }
 }

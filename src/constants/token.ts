@@ -9,7 +9,8 @@ export enum Token {
     ZRX,
     MKR,
     FIN,
-    LPToken
+    LPToken,
+    TUSD
 }
 
 export const tokenNameMap = new Map([
@@ -24,6 +25,7 @@ export const tokenNameMap = new Map([
     [Token.MKR, "MKR"],
     [Token.FIN, "FIN"],
     [Token.LPToken, "LPToken"],
+    [Token.TUSD, "TUSD"],
 ]);
 
 /**

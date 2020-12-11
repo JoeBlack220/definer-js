@@ -1,7 +1,7 @@
 import axios from 'axios';
 const api = require('../constants/json/api.json')
 
-class API {
+export class API {
 
     private CN_URL: string = "https://stat.definer.cn";
     private ORG_URL: string = "https://stat.definer.org";

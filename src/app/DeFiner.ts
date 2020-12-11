@@ -2,10 +2,12 @@ import { ContractInstanceStore, SavAccInstance, AccountsInstance, BankInstance }
 import Web3 from 'web3';
 import { Token, tokenNameMap } from '../constants';
 import { GasPriceStore } from '../lib';
+import { API } from '../lib';
 export { Token } from '../constants';
 
 export class DeFiner {
 
+    public API: API = new API();
     private web3: Web3;
     private contractInstanceStore?: ContractInstanceStore;
     private account?: string;
@@ -345,6 +347,130 @@ export class DeFiner {
         }
 
         return await accountsInstance.isAccountLiquidatable(this.account, target);
+    }
+
+    /**
+     * Call getTotalDepositStore() on Bank contract.
+     * @param token - The token that we want to query on.
+     */
+    public async getTotalDepositStore(token: Token) {
+
+        const bankInstance = await this.getBankContract();
+
+        if (!this.account) {
+            throw new Error("No account in the provider.");
+        }
+
+        const tokenName = this.getTokenName(token);
+
+        return await bankInstance.getTotalDepositStore(tokenName, this.account);
+    }
+
+
+
+    /**
+     * Call getBorrowRatePerBlock() on Bank contract.
+     * @param token - The token that we want to query on.
+     */
+    public async getBorrowRatePerBlock(token: Token) {
+
+        const bankInstance = await this.getBankContract();
+
+        if (!this.account) {
+            throw new Error("No account in the provider.");
+        }
+
+        const tokenName = this.getTokenName(token);
+
+        return await bankInstance.getBorrowRatePerBlock(tokenName, this.account);
+    }
+
+    /**
+     * Call getDepositRatePerBlock() on Bank contract.
+     * @param token - The token that we want to query on.
+     */
+    public async getDepositRatePerBlock(token: Token) {
+
+        const bankInstance = await this.getBankContract();
+
+        if (!this.account) {
+            throw new Error("No account in the provider.");
+        }
+
+        const tokenName = this.getTokenName(token);
+
+        return await bankInstance.getDepositRatePerBlock(tokenName, this.account);
+    }
+
+
+    /**
+     * Call getCapitalUtilizationRatio() on Bank contract.
+     * @param token - The token that we want to query on.
+     */
+    public async getCapitalUtilizationRatio(token: Token) {
+
+        const bankInstance = await this.getBankContract();
+
+        if (!this.account) {
+            throw new Error("No account in the provider.");
+        }
+
+        const tokenName = this.getTokenName(token);
+
+        return await bankInstance.getCapitalUtilizationRatio(tokenName, this.account);
+    }
+
+
+    /**
+     * Call getCapitalCompoundRatio() on Bank contract.
+     * @param token - The token that we want to query on.
+     */
+    public async getCapitalCompoundRatio(token: Token) {
+
+        const bankInstance = await this.getBankContract();
+
+        if (!this.account) {
+            throw new Error("No account in the provider.");
+        }
+
+        const tokenName = this.getTokenName(token);
+
+        return await bankInstance.getCapitalCompoundRatio(tokenName, this.account);
+    }
+
+
+    /**
+     * Call getDepositRatePerBlock() on Bank contract.
+     * @param token - The token that we want to query on.
+     */
+    public async getTokenState(token: Token) {
+
+        const bankInstance = await this.getBankContract();
+
+        if (!this.account) {
+            throw new Error("No account in the provider.");
+        }
+
+        const tokenName = this.getTokenName(token);
+
+        return await bankInstance.getTokenState(tokenName, this.account);
+    }
+
+    /**
+     * Call getPoolAmount() on Bank contract.
+     * @param token - The token that we want to query on.
+     */
+    public async getPoolAmount(token: Token) {
+
+        const bankInstance = await this.getBankContract();
+
+        if (!this.account) {
+            throw new Error("No account in the provider.");
+        }
+
+        const tokenName = this.getTokenName(token);
+
+        return await bankInstance.getPoolAmount(tokenName, this.account);
     }
 
 
