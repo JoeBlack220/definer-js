@@ -1,1 +1,2 @@
-export { DeFiner, Token } from './app/DeFiner';
+export { DeFiner } from './app/DeFiner';
+export { Token } from './constants';
