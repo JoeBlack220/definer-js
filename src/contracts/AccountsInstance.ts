@@ -5,7 +5,7 @@ import { address } from '../constants/address';
 import Web3 from 'web3';
 
 const { BN } = require("@openzeppelin/test-helpers");
-const abi = require('../constants/json/abi.json')
+const abi = require('../../data/json/abi.json')
 
 export class AccountsInstance extends ContractInstance {
 

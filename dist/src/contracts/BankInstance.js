@@ -53,7 +53,7 @@ exports.BankInstance = void 0;
 var ContractInstance_1 = require("./ContractInstance");
 var network_1 = require("../constants/network");
 var address_1 = require("../constants/address");
-var abi = require('../constants/json/abi.json');
+var abi = require('../../data/json/abi.json');
 var BankInstance = /** @class */ (function (_super) {
     __extends(BankInstance, _super);
     function BankInstance(web3) {

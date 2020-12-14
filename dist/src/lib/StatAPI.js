@@ -41,7 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.API = void 0;
 var axios_1 = __importDefault(require("axios"));
-var api = require('../constants/json/api.json');
+var api = require('../../data/json/api.json');
 var API = /** @class */ (function () {
     function API() {
         this.CN_URL = "https://stat.definer.cn";

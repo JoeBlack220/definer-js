@@ -4,7 +4,7 @@ import { idNameMap } from '../constants/network';
 import { address } from '../constants/address';
 import Web3 from 'web3';
 
-const abi = require('../constants/json/abi.json')
+const abi = require('../../data/json/abi.json')
 
 export class BankInstance extends ContractInstance {
 

@@ -54,7 +54,7 @@ var index_1 = require("./index");
 var network_1 = require("../constants/network");
 var address_1 = require("../constants/address");
 var BN = require("@openzeppelin/test-helpers").BN;
-var abi = require('../constants/json/abi.json');
+var abi = require('../../data/json/abi.json');
 var SavAccInstance = /** @class */ (function (_super) {
     __extends(SavAccInstance, _super);
     function SavAccInstance(web3) {
