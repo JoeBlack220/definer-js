@@ -1,5 +1,5 @@
 import axios from 'axios';
-const api = require('../../data/json/api.json')
+import { api } from '../constants';
 
 export class API {
 

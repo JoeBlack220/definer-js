@@ -3,8 +3,8 @@ import { ContractInstance } from './ContractInstance';
 import { idNameMap } from '../constants/network';
 import { address } from '../constants/address';
 import Web3 from 'web3';
+import { bankABI } from '../constants';
 
-const abi = require('../../data/json/abi.json')
 
 export class BankInstance extends ContractInstance {
 
@@ -35,7 +35,7 @@ export class BankInstance extends ContractInstance {
             throw new Error("Bank contract address not found in the given network.");
         }
 
-        this.contract = await new this.web3.eth.Contract(abi["Bank"], contractAddr);
+        this.contract = await new this.web3.eth.Contract(bankABI, contractAddr);
 
     }
 

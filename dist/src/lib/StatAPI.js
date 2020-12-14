@@ -41,7 +41,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.API = void 0;
 var axios_1 = __importDefault(require("axios"));
-var api = require('../../data/json/api.json');
+var constants_1 = require("../constants");
 var API = /** @class */ (function () {
     function API() {
         this.CN_URL = "https://stat.definer.cn";
@@ -54,7 +54,7 @@ var API = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        route = api["status_assests"];
+                        route = constants_1.api["status_assests"];
                         return [4 /*yield*/, axios_1.default.get("" + this.CN_URL + route, { params: { eth_address: userAddress, unit: unit } })];
                     case 1:
                         res = _a.sent();
@@ -70,7 +70,7 @@ var API = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        route = api["balances"];
+                        route = constants_1.api["balances"];
                         return [4 /*yield*/, axios_1.default.get("" + this.CN_URL + route, { params: { eth_address: userAddress, token_address: tokenAddress } })];
                     case 1:
                         res = _a.sent();
@@ -86,7 +86,7 @@ var API = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        route = api["ltv"];
+                        route = constants_1.api["ltv"];
                         return [4 /*yield*/, axios_1.default.get("" + this.CN_URL + route, { params: { eth_address: userAddress } })];
                     case 1:
                         res = _a.sent();
@@ -102,7 +102,7 @@ var API = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        route = api["balance_log"];
+                        route = constants_1.api["balance_log"];
                         return [4 /*yield*/, axios_1.default.get("" + this.CN_URL + route, { params: { eth_address: userAddress, token_address: tokenAddress, limit: limit } })];
                     case 1:
                         res = _a.sent();
@@ -118,7 +118,7 @@ var API = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        route = api["get_savings_order"];
+                        route = constants_1.api["get_savings_order"];
                         return [4 /*yield*/, axios_1.default.get("" + this.CN_URL + route, { params: { eth_address: userAddress, token_address: tokenAddress, page: page, limit: limit } })];
                     case 1:
                         res = _a.sent();
@@ -134,7 +134,7 @@ var API = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        route = api["token_status"];
+                        route = constants_1.api["token_status"];
                         return [4 /*yield*/, axios_1.default.get("" + this.CN_URL + route, { params: { token_address: tokenAddress } })];
                     case 1:
                         res = _a.sent();
@@ -150,7 +150,7 @@ var API = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        route = api["token_statistical"];
+                        route = constants_1.api["token_statistical"];
                         return [4 /*yield*/, axios_1.default.get("" + this.CN_URL + route, { params: { token_address: tokenAddress, limit: limit } })];
                     case 1:
                         res = _a.sent();
@@ -166,7 +166,7 @@ var API = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        route = api["token_prices"];
+                        route = constants_1.api["token_prices"];
                         return [4 /*yield*/, axios_1.default.get("" + this.CN_URL + route, { params: { token_address: tokenAddress } })];
                     case 1:
                         res = _a.sent();
@@ -182,7 +182,7 @@ var API = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        route = api["total_assets"];
+                        route = constants_1.api["total_assets"];
                         return [4 /*yield*/, axios_1.default.get("" + this.CN_URL + route)];
                     case 1:
                         res = _a.sent();
@@ -198,7 +198,7 @@ var API = /** @class */ (function () {
             return __generator(this, function (_a) {
                 switch (_a.label) {
                     case 0:
-                        route = api["address_list"];
+                        route = constants_1.api["address_list"];
                         return [4 /*yield*/, axios_1.default.get("" + this.CN_URL + route, { params: { page: page, limit: limit } })];
                     case 1:
                         res = _a.sent();

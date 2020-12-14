@@ -3,9 +3,8 @@ import { ContractInstance } from './index';
 import { idNameMap } from '../constants/network';
 import { address } from '../constants/address';
 import Web3 from 'web3';
-
 const { BN } = require("@openzeppelin/test-helpers");
-const abi = require('../../data/json/abi.json')
+import { accountsABI } from '../constants';
 
 export class AccountsInstance extends ContractInstance {
 
@@ -35,8 +34,7 @@ export class AccountsInstance extends ContractInstance {
         if (!contractAddr) {
             throw new Error("Bank contract address not found in the given network.");
         }
-
-        this.contract = await new this.web3.eth.Contract(abi["Accounts"], contractAddr);
+        this.contract = await new this.web3.eth.Contract(accountsABI, contractAddr);
 
     }
 

@@ -54,7 +54,7 @@ var index_1 = require("./index");
 var network_1 = require("../constants/network");
 var address_1 = require("../constants/address");
 var BN = require("@openzeppelin/test-helpers").BN;
-var abi = require('../../data/json/abi.json');
+var constants_1 = require("../constants");
 var AccountsInstance = /** @class */ (function (_super) {
     __extends(AccountsInstance, _super);
     function AccountsInstance(web3) {
@@ -87,7 +87,7 @@ var AccountsInstance = /** @class */ (function (_super) {
                             throw new Error("Bank contract address not found in the given network.");
                         }
                         _b = this;
-                        return [4 /*yield*/, new this.web3.eth.Contract(abi["Accounts"], contractAddr)];
+                        return [4 /*yield*/, new this.web3.eth.Contract(constants_1.accountsABI, contractAddr)];
                     case 2:
                         _b.contract = _c.sent();
                         return [2 /*return*/];

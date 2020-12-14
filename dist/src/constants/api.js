@@ -1,4 +1,7 @@
-{
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.api = void 0;
+exports.api = {
     "status_assests": "/api_v2/address/status_assets",
     "balances": "/api_v2/address/balances",
     "ltv": "/api_v2/address/ltv",
@@ -9,4 +12,4 @@
     "token_prices": "/api_v2/market/token_prices",
     "total_assets": "/api_v2/market/total_assets",
     "address_list": "/api_v2/market/address_list"
-}
+};
