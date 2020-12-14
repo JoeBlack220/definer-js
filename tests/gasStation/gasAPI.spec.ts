@@ -2,6 +2,8 @@ import { expect } from 'chai';
 import Web3 from 'web3';
 import { DeFiner } from '../../src/app/DeFiner';
 import { Token } from '../../src/constants'
+import { GasPriceStore } from '../../src/lib';
+
 const PrivateKeyProvider = require("truffle-privatekey-provider");
 const { BN } = require("@openzeppelin/test-helpers");
 

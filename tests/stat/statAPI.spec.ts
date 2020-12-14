@@ -19,6 +19,9 @@ describe("Stat API tests", async function () {
         await definer.initialize();
     });
 
-
+    it("Should call the status_assets API", async () => {
+        const data = await definer.API.statusAssests("0xaA817b67d605f45e7759031303b04422734834eD");
+        console.log(data);
+    });
 
 });

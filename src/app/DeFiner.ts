@@ -529,7 +529,7 @@ export class DeFiner {
      * Get the token name given the enum
      * @param token : The token in enum.
      */
-    private getTokenName(token: Token) {
+    public getTokenName(token: Token) {
         const tokenName = tokenNameMap.get(token);
 
         if (!tokenName) {

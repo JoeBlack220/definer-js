@@ -2,7 +2,7 @@
   "name": "@definer/definer-js",
   "version": "0.0.1",
   "description": "SDK for DeFiner's protocol in Javascript",
-  "main": "index.js",
+  "main": "./src/index.js",
   "scripts": {
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'tests/**/*.ts' --exit"
   },
