@@ -1,6 +1,6 @@
 {
   "name": "definer-js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "SDK for DeFiner's protocol in Javascript",
   "main": "./src/index.ts",
   "scripts": {
