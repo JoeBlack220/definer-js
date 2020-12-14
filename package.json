@@ -1,6 +1,6 @@
 {
   "name": "definer-js",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "SDK for DeFiner's protocol in Javascript",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
