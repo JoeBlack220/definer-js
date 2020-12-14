@@ -2,8 +2,8 @@
   "name": "definer-js",
   "version": "0.0.7",
   "description": "SDK for DeFiner's protocol in Javascript",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
     "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'tests/**/*.ts' --exit",
     "publish_patch": "npm version patch && npm publish --access public",
