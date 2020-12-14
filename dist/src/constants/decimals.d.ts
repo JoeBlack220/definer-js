@@ -1,0 +1,21 @@
+export declare const decimals: {
+    cBAT: number;
+    cDAI: number;
+    cETH: number;
+    cREP: number;
+    cUSDC: number;
+    cUSDT: number;
+    cWBTC: number;
+    cZRX: number;
+    BAT: number;
+    DAI: number;
+    ETH: number;
+    REP: number;
+    USDC: number;
+    USDT: number;
+    WBTC: number;
+    ZRX: number;
+    MKR: number;
+    FIN: number;
+    LPToken: number;
+};
