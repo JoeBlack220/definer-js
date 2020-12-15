@@ -47,6 +47,8 @@ npm i definer-js
 - getCapitalCompoundRatio(token: Token): Get the current Compound ratio of DeFiner.
 - getPoolAmount(token: Token): Get the total amount of a specific token that is still in DeFiner.
 
+The documentation about the stat API is not completed yet.
+
 
 
 
